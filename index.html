@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>T-Rex Dino Runner with Retro Audio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="game-container">
+    <!-- Header with branding and audio controls -->
+    <header class="game-header">
+      <div class="brand">
+        <span class="brand-icon">🦖</span>
+        <h1>T-REX RUNNER</h1>
+      </div>
+
+      <div class="audio-controls">
+        <button id="btn-sfx" class="retro-btn active" title="Toggle Sound Effects (Hotkey: M)">
+          🔊 SFX: ON
+        </button>
+        <button id="btn-music" class="retro-btn" title="Toggle 8-bit Chiptune Music">
+          🎵 MUSIC: OFF
+        </button>
+        <button id="btn-reset-score" class="retro-btn" title="Reset High Score">
+          ↺ RESET HI
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Game Canvas -->
+    <main class="canvas-wrapper">
+      <canvas id="game-canvas" width="900" height="300"></canvas>
+    </main>
+
+    <!-- Mobile & Touch Controls -->
+    <section class="mobile-controls" aria-label="Touch Controls">
+      <button id="touch-jump" class="touch-btn jump-btn">⬆ JUMP</button>
+      <button id="touch-duck" class="touch-btn duck-btn">⬇ DUCK</button>
+    </section>
+
+    <!-- Controls Legend & Shortcuts -->
+    <footer class="game-footer">
+      <div class="shortcuts">
+        <span><span class="key-badge">SPACE</span> / <span class="key-badge">↑</span> Jump</span>
+        <span><span class="key-badge">↓</span> Duck / Fast Drop</span>
+        <span><span class="key-badge">P</span> Pause</span>
+        <span><span class="key-badge">M</span> Audio</span>
+      </div>
+      <div>
+        <span>Tap canvas or buttons to play on mobile</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Audio, Sprites, and Game Engine -->
+  <script src="audio.js"></script>
+  <script src="sprites.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
+
